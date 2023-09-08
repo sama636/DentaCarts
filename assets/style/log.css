@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/photo-1629909613654-28e377c37b09.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.inputs{
+    background-color: #fff;
+    width: 420px;
+    height: 654px;
+}
+.form-control{
+    height: 55px !important;
+    width: 100% !important;
+    border: 1px solid #E6E1FF;
+    background-color: #FCFCFC;
+    border-radius: 0;
+    color: #2e384d;
+    flex: 1;
+    height: 15px;
+    margin: 16.3px 0 30px 0;
+    padding: 1rem;
+    border-radius: 2px;
+    outline: none !important;
+    box-shadow: 0 0 0 0 transparent !important;
+}
+.logo{
+    padding: 45px;
+}
+.nice{
+    font-size: 18px;
+    font-weight: 400;
+}
+.btn{
+    font-weight: bold;
+    height: 55px !important;
+    width: 85% !important;
+    margin-top: 40px;
+}
+.forget{
+    margin-top: 20px;
+    font-size: 15px;
+}
+.registr{
+    display: flex;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+small{
+    position: absolute;
+    visibility: hidden;
+    margin: -25px;
+}
+.mb-3.success input{
+    border: 1px solid rgb(22, 168, 22);
+}
+.mb-3.error input{
+    border: 1px solid rgb(243, 118, 16);
+}

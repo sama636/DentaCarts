@@ -1,0 +1,298 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body {
+    /* width: 85% !important; */
+    /* margin: auto !important; */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    color: inherit;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+.inp input{
+    width: 450px;
+    height: 30px;
+    border-radius: 5px;
+}
+.LocalIcon_root{
+    display: flex;
+    width: 100%;
+    /* padding: 0 100px; */
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    /* border-bottom: 1px solid blue; */
+}
+.searsbar{
+    font: inherit;
+    color: currentcolor;
+    box-sizing: content-box;
+    background: none;
+    margin: 0px;
+    display: block;
+    min-width: 0px;
+    width: 100%;
+    /* padding-left: 20px; */
+    border: 1px solid rgb(219, 219, 219);
+}
+.sign__in{
+    border: 0px;
+    background: none;
+}
+.sign{
+    display: flex;
+    gap: 10px;
+    border-right: 1px solid rgb(223, 220, 220);
+}
+.btn-cart{
+    border: 0px;
+    background: none;
+}
+.cart{
+    display: flex;
+    border-right: 1px solid rgb(223, 220, 220);
+    column-gap: 16px;
+}
+.btn-support{
+    border: 0px;
+    background: none;
+}
+.support{
+    display: flex;
+    gap: 10px;
+}
+.navBar{
+    display: flex;
+    gap: 10px;
+    
+}
+a{
+    color: rgb(33, 34, 52) !important;
+    font-family: 'Cabin', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.navbar{
+    width: 100%;
+    overflow: hidden;
+    padding: 0 22px;
+    text-align: center;
+    height: 50px;
+    background-color: #7144ff;
+    color: #339 !important;
+}
+.navbar-nav{
+    background-color: #fff;
+}
+li a{
+    font-size: 15px;
+    list-style: none;
+} 
+.nav-item{
+    position: relative;
+}
+.image1 .im{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.image2 .im{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.image3 .im{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.image4 .im{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.image5 .im{
+    top: 10px;
+}
+.image{
+    display: flex;
+    gap: 4rem;
+    padding: 50px;
+}
+.image p{
+    padding-top: 10px;
+}
+
+.EndodonticsDiv,
+.OrthodonticsDiv,
+.ImplantDiv,
+.PerioDiv,
+.ConsumablesDiv,
+.InstrmentDiv,
+.EquipmentDiv{
+    display: none;
+    z-index: 999;
+}
+
+.Endodontics:hover + .EndodonticsDiv,
+.Orthodontics:hover + .OrthodonticsDiv,
+.Implant:hover + .ImplantDiv,
+.Perio:hover + .PerioDiv,
+.Instrment:hover + .InstrmentDiv,
+.Equipment:hover + .EquipmentDiv,
+.Consumables:hover + .ConsumablesDiv{
+    display: block;
+}
+ul{
+    list-style: none;
+}
+.RestorativeDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.EndodonticsDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.OrthodonticsDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.ImplantDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.PerioDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.ConsumablesDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.InstrmentDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.EquipmentDiv {
+    display: none;
+    position: absolute;
+    top: 37px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999; 
+    width: 90%;
+}
+.best{
+    border: 0;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 40px;
+    margin-left: 20px;
+} 
+.card-img-top{
+    height: 180px !important;
+}
+.product{
+    border: 1px solid #cccccc;
+    /* margin-left: .5px; */
+}
+
+.button .btn{
+    background-color: rgb(255, 217, 51);
+    width: 100%;
+    margin-bottom: 20px;
+    /* text-align: end; */
+}
+.aaaa p{
+    color: #666;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.footer-con{
+    display: flex;
+    justify-content: space-between;   
+    margin: auto;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    width: 80%;
+    margin-top: 20px;
+}
+.by{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.css-12199pk{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    /* right: 170px; */
+    top: 30px;
+}
+.header{
+    margin-left: 20px;
+        margin-left: 100px;
+}
+
+

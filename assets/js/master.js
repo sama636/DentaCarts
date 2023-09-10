@@ -1,4 +1,31 @@
-
+// Moblile Nav
+const restorativeArrow = document.querySelector(".restorativeArrow")
+const restorativeArrowDown = document.querySelector(".restorativeArrowDown")
+const restorativeContent = document.querySelector(".restorativeContent")
+console.log(restorativeArrow);
+restorativeArrow.addEventListener("click",function(){
+    restorativeArrow.style.display="none";
+    restorativeArrowDown.style.display="block";
+    restorativeContent.style.display="block";
+    const ConsumablesArrow = document.querySelector(".ConsumablesArrow")
+    const ConsumablesArrowDown = document.querySelector(".ConsumablesArrowDown")
+    const consumablesContent = document.querySelector(".consumablesContent")
+    ConsumablesArrow.addEventListener("click",function(){
+        ConsumablesArrow.style.display="none";
+        ConsumablesArrowDown.style.display="block";
+        consumablesContent.style.display="block";
+    })
+    ConsumablesArrowDown.addEventListener("click",function(){
+        ConsumablesArrow.style.display="block";
+        ConsumablesArrowDown.style.display="none";
+        consumablesContent.style.display="none";
+    })
+})
+restorativeArrowDown.addEventListener("click",function(){
+    restorativeArrow.style.display="block";
+    restorativeArrowDown.style.display="none";
+    restorativeContent.style.display="none";
+})
 const products = [
         {
             "id":1,
@@ -163,7 +190,7 @@ const products = [
             "price": "225 EGP",
         },
         {
-            "id":11,
+            "id":28,
             "Image": "assets/images/24979_1.webp",
             "title": "Meta Biomed Nexcomp LC Nanohybrid Composite",
             "price": "230 EGP",
@@ -171,7 +198,7 @@ const products = [
 ]
 
 const prodCont = document.querySelector(".products-cont");
-const cart = JSON.parse(localStorage.getItem('cart'));
+const cart = JSON.parse(localStorage.getItem('cart'))?? [];
 console.log(cart);
 // console.log(cart);
 
@@ -219,7 +246,7 @@ function addEventsToBtn(){
                 cartProd.quantity++;
             }
 
-                        console.log(JSON.stringify(cart));
+            console.log(JSON.stringify(cart));
             localStorage.setItem('cart', JSON.stringify(cart))
 
         })

@@ -126,176 +126,117 @@
 //         EquipmentDiv.style.display = "none";
 //     });
 // });
-const products = [
-    {
-        "Image": "assets/images/3930_8265.webp",
-        "title": "Medin Navigator Evo Start Kit",
-        "price": "1,175 EGP",
-    },
-    {
-        "Image": "assets/images/2953_1.webp",
-        "title": "B&E X-Temp LC Temporary filling (3g)",
-        "price": "125 EGP",
-    },
-    {
-        "Image": "assets/images/3087_1.webp",
-        "title": "DETAX Fermin Temporary filling (40g)",
-        "price": "95 EGP",
-    },
-    {
-        "Image": "assets/images/3181_1.webp",
-        "title": "i-Dental i-PRO Temporary Filling Material (38g)",
-        "price": "85 EGP",
-    },
-    {
-        "Image": "assets/images/3212_1.webp",
-        "title": "Maquira Obtur Temporary filling (25g)",
-        "price": "85 EGP",
-    },
-    {
-        "Image": "assets/images/39238_1.webp",
-        "title": "HANDAE HanTemp LC",
-        "price": "125 EGP",
-    },
-    {
-        "Image": "assets/images/42577_1.webp",
-        "title": "WP Dent A Cav (Temp. Filling White 30g)",
-        "price": "160 EGP",
-    },
-    {
-        "Image": "assets/images/3129_1.webp",
-        "title": "EZ-Shine Composite Polishing paste",
-        "price": "65 EGP",
-    },
-    {
-        "Image": "assets/images/26654_1.webp",
-        "title": "Prevest Orafil G Temporary filling 40g",
-        "price": "115 EGP",
-    },
-    {
-        "Image": "assets/images/3270_1.webp",
-        "title": "MATRIX BAND CHINA (10PCS)",
-        "price": "8 EGP",
-    },
-    {
-        "Image": "assets/images/24979_1.webp",
-        "title": "Meta Biomed Nexcomp LC Nanohybrid Composite",
-        "price": "230 EGP",
-    },
-    {
-        "Image": "assets/images/3598_1.webp",
-        "title": "TOR-VM Fixing Wooden Wedges (100pcs) - 4 Types",
-        "price": "95 EGP",
-    },
-    {
-        "Image": "assets/images/361_1.webp",
-        "title": "Diamond Wedges 1pc",
-        "price": "37 EGP",
-    },
-    {
-        "Image": "assets/images/2305_1.webp",
-        "title": "GC-America EQUIA Forte HT Fil",
-        "price": "95 EGP",
-    },
-    {
-        "Image": "assets/images/33003_1.webp",
-        "title": "Kerr HERCULITE CLASSIC KIT TK",
-        "price": "1,900 EGP",
-    },
-    {
-        "Image": "assets/images/2282_1.webp",
-        "title": "Spident Fine Etch 5ml",
-        "price": "98 EGP",
-    },
-    {
-        "Image": "assets/images/2326_1.webp",
-        "title": "schutz Capo composite universal 6g",
-        "price": "610 EGP",
-    },
-    {
-        "Image": "assets/images/35028_1.webp",
-        "title": "Dental Polishing Brush - 1 piece",
-        "price": "2 EGP",
-    },
-    {
-        "Image": "assets/images/298_1.webp",
-        "title": "Bisco All-Bond Universal 0.5ml",
-        "price": "310 EGP",  
-    },
-    {
-        "Image": "assets/images/51837_1.webp",
-        "title": "Octa-Prep EDTA Cream",
-        "price": "65 EGP",
-    },
-    {
-        "Image": "assets/images/3549_1.webp",
-        "title": "Spident Viopex (2.2g)",
-        "price": "310 EGP",
-    },
-    {
-        "Image": "assets/images/815115.webp",
-        "title": "Kerr SoftClamp Kit",
-        "price": "2,000 EGP",
-    },
-    {
-        "Image": "assets/images/3483_1.webp",
-        "title": "Prevest Calcigel (2g)",
-        "price": "220 EGP",
-    },
-]
+// Moblile Nav
+const restorativeArrow = document.querySelector(".restorativeArrow")
+const restorativeArrowDown = document.querySelector(".restorativeArrowDown")
+const restorativeContent = document.querySelector(".restorativeContent")
+restorativeArrow.addEventListener("click",function(){
+    restorativeArrow.style.display="none";
+    restorativeArrowDown.style.display="block";
+    restorativeContent.style.display="block";
+    const ConsumablesArrow = document.querySelector(".ConsumablesArrow")
+    const ConsumablesArrowDown = document.querySelector(".ConsumablesArrowDown")
+    const consumablesContent = document.querySelector(".consumablesContent")
+    ConsumablesArrow.addEventListener("click",function(){
+        ConsumablesArrow.style.display="none";
+        ConsumablesArrowDown.style.display="block";
+        consumablesContent.style.display="block";
+    })
+    ConsumablesArrowDown.addEventListener("click",function(){
+        ConsumablesArrow.style.display="block";
+        ConsumablesArrowDown.style.display="none";
+        consumablesContent.style.display="none";
+    })
+})
+restorativeArrowDown.addEventListener("click",function(){
+    restorativeArrow.style.display="block";
+    restorativeArrowDown.style.display="none";
+    restorativeContent.style.display="none";
+})
+let cart = JSON.parse(localStorage.getItem('cart'));
 
-const prodCont = document.querySelector(".products-cont");
-const cart = JSON.parse(localStorage.getItem('cart'));
-console.log(cart);
-// console.log(cart);
+const prodCont = document.querySelector('.cart-cont .content');
 
-displayData();
-
-function displayData(){
-    let elements = '';
-    products.forEach(product =>{
-        elements += `
-        <div class="product d-flex flex-column justify-content-evenly col-12 col-md-4 col-lg-3" data-id=${product.id}>
-                        <div class="img">
-                            <img src=${product.Image} class="card-img-top" alt="...">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">${product.title}</p>
-                            <p class="price">${product.price}</p>
-                        </div>
-                        <div class="button">
-                            <button type="button" class="btn btn-warning Add-To-Cart">Add To Cart</button>
-                        </div>
-                    </div>
-        `
+displayData(cart)
+function displayData(ele){
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    let elements=""
+    cart.forEach((ele) =>{
+        elements += `<div class="cart-product flex-column flex-md-row my-5 d-flex align-items-center justify-content-between mx-3" data-id=${ele.id}>
+        <div class="itemImg">
+            <img class="" src="${ele.Image}" alt="">
+        </div>
+        <div class="itemTitle">
+            <h5 class="cartText text-center mt-4">${ele.title}</h5>
+        </div>
+        <div class="itemIcons flex-column flex-md-row gap-3 d-flex align-items-center justify-content-between">
+            <div class="incDecBtn d-flex gap-4 align-content-center justify-content-between mx-5">
+                <i class="fa-solid fa-plus text-white rounded-pill bg-secondary p-1"></i>
+                <span class="fw-bold itemquantity">${ele.quantity}</span>
+                <i class="fa-solid fa-minus text-white rounded-pill bg-secondary p-1"></i>
+            </div>
+            <div class="ItemPrice mx-4">
+                <span class="price">${ele.price}</span>
+            </div>
+            <div class="itemRemove">
+                <span class="text-danger remove-product">Remove</span>
+            </div>
+        </div>
+    </div> <hr>`
     })
     prodCont.innerHTML = elements;
-    addEventsToBtn();
-    
 }
-
+addEventsToBtn()
 function addEventsToBtn(){
-    const addToCartBtn = document.querySelectorAll(".Add-To-Cart");
+    const increasBtnd = document.querySelectorAll('.itemIcons .fa-plus')
+    const dereasBtnd = document.querySelectorAll('.itemIcons .fa-minus');
+    const removeBtn = document.querySelectorAll('.remove-product');
+    const removeAllBtn = document.querySelector('.remove-all');
 
-    addToCartBtn.forEach(btn =>{
-        btn.addEventListener("click", ()=>{
-            const perant = btn.closest('.product');
-            const id = perant.dataset.id;
-
-            const product = products.find(product => product.id == id);
-
-            const cartProd = cart.find(product => product.id == id);
-
-            if(cartProd == undefined){
-                cart.push({...product, quantity:1});
-            }
-            else{
-                cartProd.quantity++;
-            }
-
-                        console.log(JSON.stringify(cart));
+    increasBtnd.forEach(btn =>{
+        btn.addEventListener("click", () =>{
+            const parent = btn.closest(".cart-product");
+            const id = parent.dataset.id;
+            console.log(id);
+            const prodObj = cart.find(ele => ele.id == id);
+            console.log(prodObj);
+            prodObj.quantity++;
+            const itemquantity = parent.querySelector(".itemquantity");
+            itemquantity.textContent = prodObj.quantity;
             localStorage.setItem('cart', JSON.stringify(cart))
-
         })
+        
+    })
+    dereasBtnd.forEach(btn =>{
+        btn.addEventListener("click", () =>{
+            const parent = btn.closest(".cart-product");
+            const id = parent.dataset.id;
+            const prodObj = cart.find(ele => ele.id == id);
+            if(prodObj.quantity == 1) return;
+            prodObj.quantity--;
+            const itemquantity = parent.querySelector(".itemquantity");
+            itemquantity.textContent = prodObj.quantity;
+            localStorage.setItem('cart', JSON.stringify(cart))
+        })
+        
+    })
+    removeBtn.forEach(btn =>{
+        btn.addEventListener("click", () =>{
+            console.log(btn);
+            const par = btn.closest(".cart-product"); 
+            const id = par.dataset.id;
+            console.log(id);
+            cart = cart.filter(ele => ele.id != id);
+            console.log(cart);
+            par.remove();
+            localStorage.setItem('cart', JSON.stringify(cart));
+        })
+    })
+
+}
+const btn = document.querySelector(".check");
+function btnCheck(){
+    btn.addEventListener('click', () =>{
+        alert("checkout");
     })
 }

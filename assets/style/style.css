@@ -95,7 +95,7 @@ li a{
     position: relative;
     padding-left: 0;
 }
-.image1 .im{
+/* .image1 .im{
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -125,7 +125,7 @@ li a{
 }
 .image p{
     padding-top: 10px;
-}
+} */
 
 .EndodonticsDiv,
 .OrthodonticsDiv,
@@ -282,22 +282,9 @@ i:hover{
     justify-content: space-between;
     margin: 80px;
 }
-.see{
-    width: 90px;
-    height: 40px;
-    border: 1px solid rgba(33, 34, 52, 0.5);
-    background-color: #fff;
-    margin-right: 80px;
-    font-weight: 400;
-    color: #212234;
-    position: relative;
-}
-.see:hover{
-    background-color: rgb(247, 245, 245);
-    border: 1px solid #000;
-}
+
 .sale{
-    margin-left: 80px;
+    margin-top: 5px;
 }
 .aaaa p{
     color: #666;
@@ -318,19 +305,14 @@ i:hover{
     text-align: center;
     font-size: 18px;
     font-weight: 600;
-    padding-bottom: 20px;
+    background-color: #339;
+    color: #fff;
 }
-.css-12199pk{
-    display: flex;
-    gap: 20px;
-    position: relative;
-    /* right: 170px; */
-    top: 30px;
-}
-.image{
+
+/* .image{
     width: 150px;
     height: 150px;
-}
+} */
 .carda{
     display: flex;
 }
@@ -422,8 +404,6 @@ i:hover{
 }
 .img img{
     height: 150px;
-    text-align: center;
-    margin: 19px
 }
 .pricee{
     display: flex;
@@ -436,8 +416,6 @@ i:hover{
 }
 .imgg img{
     height: 130px;
-    text-align: center;
-    margin: 30px;
 }
 .titlee{
     display: flex;
@@ -457,4 +435,59 @@ i:hover{
 .ppp{
     text-align: center;
     padding-top: 30px;
+}
+/* Mobile Nav */
+.restorativeArrowDown{
+    display: none;
+}
+.ConsumablesArrowDown{
+    display: none;
+}
+.restorativeContent{
+    display: none;
+}
+.consumablesContent{
+    display: none;
+}
+@media (max-width: 860px) {
+    .cart a{
+        display: none;
+    }
+    .sign .sign-in{
+        display: none;
+    }
+    .svg2{
+        display: none;
+    }
+    .svg4{
+        display: none;
+    }
+    .svg6{
+        display: none;
+    }
+    .support{
+        display: none;
+    }
+    .cart{
+        border-right: none;
+    }
+    .svg{
+        padding-right: 10px;
+    }
+    .footer-con{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* text-align: center; */
+    }
+    .title{
+        display: flex;
+        justify-content: space-between;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .denta .image1,.image2,.image3, .image4, .image5{
+        width: 70px;
+    }
 }

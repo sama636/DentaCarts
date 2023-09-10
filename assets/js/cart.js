@@ -127,3 +127,31 @@ Equipment.addEventListener("mouseover", function () {
     });
 });
 
+// Moblile Nav
+const restorativeArrow = document.querySelector(".restorativeArrow")
+const restorativeArrowDown = document.querySelector(".restorativeArrowDown")
+const restorativeContent = document.querySelector(".restorativeContent")
+console.log(restorativeArrow);
+restorativeArrow.addEventListener("click",function(){
+    restorativeArrow.style.display="none";
+    restorativeArrowDown.style.display="block";
+    restorativeContent.style.display="block";
+    const ConsumablesArrow = document.querySelector(".ConsumablesArrow")
+    const ConsumablesArrowDown = document.querySelector(".ConsumablesArrowDown")
+    const consumablesContent = document.querySelector(".consumablesContent")
+    ConsumablesArrow.addEventListener("click",function(){
+        ConsumablesArrow.style.display="none";
+        ConsumablesArrowDown.style.display="block";
+        consumablesContent.style.display="block";
+    })
+    ConsumablesArrowDown.addEventListener("click",function(){
+        ConsumablesArrow.style.display="block";
+        ConsumablesArrowDown.style.display="none";
+        consumablesContent.style.display="none";
+    })
+})
+restorativeArrowDown.addEventListener("click",function(){
+    restorativeArrow.style.display="block";
+    restorativeArrowDown.style.display="none";
+    restorativeContent.style.display="none";
+})

@@ -140,21 +140,47 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 800,
     }).mount();
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     var splide = new Splide( '.new-splide', {
+        direction: "ltr",
+        paginationDirection: "ltr",
+        arrows: true,
+        pagination: false,
+        type: "loop",
+        perMove: 1,
         perPage: 4,
-        rewind : true,
-        gap : 20,
-      } );
-      
-      splide.mount();
+        breakpoints: {
+            678: {
+                perPage: 2,
+            },
+            920: {
+                perPage: 4,
+            },
+        },
+        margin:20,
+    } );
+    splide.mount();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
     var splide = new Splide( '.splide-sec', {
-        perPage: 7,
-        rewind : true,
-        gap : 20,
+        direction: "ltr",
+        paginationDirection: "ltr",
+        arrows: true,
+        pagination: false,
+        type: "loop",
+        perMove: 1,
+        perPage: 4,
+        breakpoints: {
+            678: {
+                perPage: 2,
+            },
+            920: {
+                perPage: 4,
+            },
+        },
+        margin:20,
       } );
       
       splide.mount();
@@ -162,49 +188,115 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     var splide = new Splide( '.splide-section', {
+        direction: "ltr",
+        paginationDirection: "ltr",
+        arrows: true,
+        pagination: false,
+        type: "loop",
+        perMove: 1,
         perPage: 7,
-        rewind : true,
-        gap : 20,
+        breakpoints: {
+            678: {
+                perPage: 2,
+            },
+            920: {
+                perPage: 4,
+            },
+        },
+        margin:20,
       } );
       
       splide.mount();
 });
 document.addEventListener("DOMContentLoaded", function () {
     var splide = new Splide( '.New-splide', {
+        direction: "ltr",
+        paginationDirection: "ltr",
+        arrows: true,
+        pagination: false,
+        type: "loop",
+        perMove: 1,
         perPage: 4,
-        rewind : true,
-        gap : 20,
+        breakpoints: {
+            678: {
+                perPage: 2,
+            },
+            920: {
+                perPage: 4,
+            },
+        },
+        margin:20,
       } );
       
       splide.mount();
 });
 document.addEventListener("DOMContentLoaded", function () {
     var splide = new Splide( '.best-splide', {
+        direction: "ltr",
+        paginationDirection: "ltr",
+        arrows: true,
+        pagination: false,
+        type: "loop",
+        perMove: 1,
         perPage: 4,
-        rewind : true,
-        gap : 20,
+        breakpoints: {
+            678: {
+                perPage: 2,
+            },
+            920: {
+                perPage: 4,
+            },
+        },
+        margin:20,
       } );
       
       splide.mount();
 });
 document.addEventListener("DOMContentLoaded", function () {
     var splide = new Splide( '.slide-offers', {
+        direction: "ltr",
+        paginationDirection: "ltr",
+        arrows: true,
+        pagination: false,
+        type: "loop",
+        perMove: 1,
         perPage: 3,
-        rewind : true,
-        gap : 20,
+        breakpoints: {
+            678: {
+                perPage: 2,
+            },
+            920: {
+                perPage: 4,
+            },
+        },
+        margin:20,
       } );
       
       splide.mount();
 });
 document.addEventListener("DOMContentLoaded", function () {
     var splide = new Splide( '.slide-clear', {
+        direction: "ltr",
+        paginationDirection: "ltr",
+        arrows: true,
+        pagination: false,
+        type: "loop",
+        perMove: 1,
         perPage: 3,
-        rewind : true,
-        gap : 20,
+        breakpoints: {
+            678: {
+                perPage: 2,
+            },
+            920: {
+                perPage: 4,
+            },
+        },
+        margin:20,
       } );
       
       splide.mount();
 });
+
 
 
 // const menuToggle = document.querySelector('.toggle');
@@ -218,3 +310,31 @@ function save_data_to_wishList(){
     console.log(saved);
 }
 
+// Moblile Nav
+const restorativeArrow = document.querySelector(".restorativeArrow")
+const restorativeArrowDown = document.querySelector(".restorativeArrowDown")
+const restorativeContent = document.querySelector(".restorativeContent")
+console.log(restorativeArrow);
+restorativeArrow.addEventListener("click",function(){
+    restorativeArrow.style.display="none";
+    restorativeArrowDown.style.display="block";
+    restorativeContent.style.display="block";
+    const ConsumablesArrow = document.querySelector(".ConsumablesArrow")
+    const ConsumablesArrowDown = document.querySelector(".ConsumablesArrowDown")
+    const consumablesContent = document.querySelector(".consumablesContent")
+    ConsumablesArrow.addEventListener("click",function(){
+        ConsumablesArrow.style.display="none";
+        ConsumablesArrowDown.style.display="block";
+        consumablesContent.style.display="block";
+    })
+    ConsumablesArrowDown.addEventListener("click",function(){
+        ConsumablesArrow.style.display="block";
+        ConsumablesArrowDown.style.display="none";
+        consumablesContent.style.display="none";
+    })
+})
+restorativeArrowDown.addEventListener("click",function(){
+    restorativeArrow.style.display="block";
+    restorativeArrowDown.style.display="none";
+    restorativeContent.style.display="none";
+})

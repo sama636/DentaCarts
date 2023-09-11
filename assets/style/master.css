@@ -27,14 +27,15 @@ a{
     height: 30px;
     border-radius: 5px;
 }
-.LocalIcon_root{
+.LocalIcon_root {
     display: flex;
     width: 100%;
-    /* padding: 0 100px; */
+    padding: 0px -36px;
     height: 100px;
+    font-size: 21px;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 27px;
     /* border-bottom: 1px solid blue; */
 }
 .searsbar{
@@ -46,26 +47,28 @@ a{
     display: block;
     min-width: 0px;
     width: 100%;
-    /* padding-left: 20px; */
+    padding-left: 15px;
     border: 1px solid rgb(219, 219, 219);
 }
 .sign__in{
     border: 0px;
     background: none;
 }
-.sign{
+.sign {
     display: flex;
-    gap: 10px;
+    gap: 4px;
     border-right: 1px solid rgb(223, 220, 220);
+    padding-right: 10px;
 }
 .btn-cart{
     border: 0px;
     background: none;
 }
-.cart{
+.cart {
     display: flex;
     border-right: 1px solid rgb(223, 220, 220);
-    column-gap: 16px;
+    column-gap: 9px;
+    padding-right: 10px;
 }
 .btn-support{
     border: 0px;
@@ -73,12 +76,12 @@ a{
 }
 .support{
     display: flex;
-    gap: 10px;
+    gap: 7px;
 }
 .navBar{
     display: flex;
     gap: 10px;
-    
+    margin: 15px 0;
 }
 a{
     color: rgb(33, 34, 52) !important;
@@ -89,15 +92,20 @@ a{
 }
 .navbar{
     width: 100%;
-    overflow: hidden;
-    padding: 0 22px;
-    text-align: center;
+    /* overflow: hidden; */
+    padding: 0 86px;
     height: 50px;
     background-color: #7144ff;
     color: #339 !important;
 }
-.navbar-nav{
+.navbar-nav {
     background-color: #fff;
+    /* height: 40px; */
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
+    left: 85px;
 }
 li a{
     font-size: 15px;
@@ -358,7 +366,7 @@ ul{
     } */
     .by{
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         background-color: #339;
         color: #fff;

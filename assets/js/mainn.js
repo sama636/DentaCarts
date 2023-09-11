@@ -165,6 +165,12 @@ const products = [
         "title": "Prevest Calcigel (2g)",
         "price": "220 EGP",
     },
+    {
+        "id": 21,
+        "Image": "assets/images/298_1.webp",
+        "title": "Bisco All-Bond Universal 0.5ml",
+        "price": "310 EGP",  
+    },
 ]
 
 const prodCont = document.querySelector(".products-cont");
@@ -190,7 +196,7 @@ function displayData(){
                             <button type="button" class="btn btn-warning Add-To-Cart">Add To Cart</button>
                         </div>
                     </div>
-                    <hr>
+                    
         `
     })
     prodCont.innerHTML = elements;

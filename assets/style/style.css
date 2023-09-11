@@ -16,15 +16,15 @@ a{
     height: 30px;
     border-radius: 5px;
 }
-.LocalIcon_root{
+.LocalIcon_root {
     display: flex;
     width: 100%;
-    padding: 1rem 100px;
+    /* padding: 1rem 100px; */
     height: 90px;
     justify-content: center;
     align-items: center;
-    gap: 70px;
-    border-bottom: 1px solid blue;
+    gap: 37px;
+    /* border-bottom: 1px solid blue; */
 }
 .searsbar{
     font: inherit;
@@ -42,19 +42,21 @@ a{
     border: 0px;
     background: none;
 }
-.sign{
+.sign {
     display: flex;
-    gap: 10px;
+    gap: 4px;
     border-right: 1px solid rgb(223, 220, 220);
+    padding-right: 10px;
 }
 .btn-cart{
     border: 0px;
     background: none;
 }
-.cart{
+.cart {
     display: flex;
     border-right: 1px solid rgb(223, 220, 220);
-    column-gap: 16px;
+    column-gap: 9px;
+    padding-right: 10px;
 }
 .btn-support{
     border: 0px;
@@ -62,7 +64,7 @@ a{
 }
 .support{
     display: flex;
-    gap: 10px;
+    gap: 7px;
 }
 .navBar{
     display: flex;
@@ -84,8 +86,13 @@ a{
     background-color: #7144ff;
     color: #339 !important;
 }
-.navbar-nav{
+.navbar-nav {
     background-color: #fff;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    top: 4px;
 }
 li a{
     font-size: 15px;
@@ -303,7 +310,7 @@ i:hover{
 }
 .by{
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     background-color: #339;
     color: #fff;
@@ -333,6 +340,15 @@ i:hover{
     position: relative;
     /* bottom: 50px; */
 /* } */ 
+.splide__list {
+    backface-visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    margin: 0!important;
+    /* padding: 0!important; */
+    gap: 5px;
+}
 .splide-sec{
     width: 90%;
     margin: auto;

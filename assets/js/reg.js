@@ -43,36 +43,5 @@ function onError(input,massage){
         parent.classList.add("error");
         parent.classList.remove("success");
 }
-function isValidPassowrd(passowrd){
 
-}
-// function valiodation (){
-//     // console.log("valiodate input");
-//     if(passowrd.value.trim()===""){
-//         onError(passowrd,"Email Address cannot be empty");
-//     }
-//     else{
-//         onSuccess(passowrd);
-//     }
-// }
-// document.querySelector("button")
-// .addEventListener("click", (event)=>{
-//     event.preventDefault()
-//     valiodation();
-// })
-// function onSuccess(input){
-//     let parent = input.parentElement;
-//         let massageEle = parent.querySelector("small");
-//         massageEle.style.visibility="hidden";
-//         massageEle.innerText="";
-//         parent.classList.remove("error");
-//         parent.classList.add("success");
-// }
-// function onError(input,massage){
-//     let parent = input.parentElement;
-//         let massageEle = parent.querySelector("small");
-//         massageEle.style.visibility="visible";
-//         massageEle.innerText=massage;
-//         parent.classList.add("error");
-//         parent.classList.remove("success");
-// }
+

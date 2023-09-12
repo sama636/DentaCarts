@@ -26,15 +26,17 @@ restorativeArrowDown.addEventListener("click",function(){
     restorativeArrowDown.style.display="none";
     restorativeContent.style.display="none";
 })
+
+
 let cart = JSON.parse(localStorage.getItem('cart'));
 
 const prodCont = document.querySelector('.cart-cont .content');
-const priceTotal = document.querySelector(".price-total")
+const priceTotal = document.querySelector(".price-total");
 
 displayData(cart);
 function displayData(ele){
     const cart = JSON.parse(localStorage.getItem('cart'));
-    let elements=""
+    let elements="";
     cart.forEach((ele) =>{
         elements += `<div class="cart-product flex-column flex-md-row my-5 d-flex align-items-center justify-content-between mx-3" data-id=${ele.id}>
         <div class="itemImg">
@@ -50,7 +52,7 @@ function displayData(ele){
                 <i class="fa-solid fa-minus text-white rounded-pill bg-secondary p-1"></i>
             </div>
             <div class="ItemPrice mx-4">
-                <span class="price">${ele.price}</span>
+                <span class="price">${ele.price} <span> EGP</span></span>
             </div>
             <div class="itemRemove">
                 <span class="text-danger remove-product">Remove</span>
@@ -60,7 +62,7 @@ function displayData(ele){
     })
     prodCont.innerHTML = elements;
     calcTotal();
-    addEventsToBtn()
+    addEventsToBtn();
 
 }
 function addEventsToBtn(){
@@ -80,7 +82,7 @@ function addEventsToBtn(){
             const itemquantity = parent.querySelector(".itemquantity");
             itemquantity.textContent = prodObj.quantity;
             localStorage.setItem('cart', JSON.stringify(cart))
-            calcTotal()
+            calcTotal();
         })
         
     })
@@ -94,7 +96,7 @@ function addEventsToBtn(){
             const itemquantity = parent.querySelector(".itemquantity");
             itemquantity.textContent = prodObj.quantity;
             localStorage.setItem('cart', JSON.stringify(cart))
-            calcTotal()
+            calcTotal();
         })
         
     })
@@ -108,15 +110,34 @@ function addEventsToBtn(){
             console.log(cart);
             par.remove();
             localStorage.setItem('cart', JSON.stringify(cart));
-            calcTotal()
+            // calcTotal();
         })
+    })
+    removeAllBtn.addEventListener("click", () =>{
+        cart = [];
+        prodCont.innerHTML = `<h1 class="text-center fw-bolder">
+        <div class="carts">
+        <p class="pcart">Your cart is empty</p>
+        <img src="assets/images/noCart.svg" alt="">
+        <div class="col-12">
+            <button type="submit" class="btn btn-warning m-5" onclick="location.href='master.html';">Continue
+                Shopping</button>
+        </div>
+    </div>
+        </h1>`
+        localStorage.setItem('cart', JSON.stringify(cart));
+            calcTotal();
     })
 
 }
-
 function calcTotal(){
     let total = cart.reduce((acc, ele) =>{
-        return acc + (+ele.price * ele.quantity);
-    } , 0)
-    console.log(total);
+        const itemCost = ele.price * ele.quantity;
+        console.log(itemCost);
+        console.log(`price: ${ele.price}, Quantity: ${ele.quantity}, Item Cost: ${itemCost}`);
+        let totalPrice = acc + ele.price;
+        return totalPrice;
+    } , 0);
+    // console.log(total);
+    priceTotal.textContent =  total + 'EGP' ;
 }

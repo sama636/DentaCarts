@@ -105,7 +105,7 @@ a{
     font-size: 14px;
     position: relative;
     bottom: 2px;
-    left: 85px;
+    /* left: 85px; */
 }
 li a{
     font-size: 15px;

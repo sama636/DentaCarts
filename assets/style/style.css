@@ -266,12 +266,12 @@ i{
     justify-content: space-between;
     padding: 10px;
 }
-i:hover{
+/* i:hover{
     background-color: rgba(243, 131, 131, 0.5);
     width: 20px;
     height: 20px;
     border-radius: 50%;
-}
+} */
 
 .coll{
     display: flex;
@@ -348,6 +348,7 @@ i:hover{
     margin: 0!important;
     /* padding: 0!important; */
     gap: 5px;
+    text-align: center;
 }
 .splide-sec{
     width: 90%;
@@ -376,9 +377,9 @@ i:hover{
 } */
 .splide__slide{
     border: 1px solid rgb(206, 205, 205);
-    display: flex;
+    /* display: flex; */
     border-radius: 3px;
-    gap: 20px;
+    /* gap: 20px; */
 }
 .imagg{
     height: 150px;
@@ -507,3 +508,7 @@ i:hover{
         width: 70px;
     }
 }
+/* .splide__slide img {
+    vertical-align: bottom;
+    height: 100%;
+} */

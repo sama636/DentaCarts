@@ -132,11 +132,11 @@ function addEventsToBtn(){
 }
 function calcTotal(){
     let total = cart.reduce((acc, ele) =>{
-        const itemCost = ele.price * ele.quantity;
-        console.log(itemCost);
+        const itemCost = +ele.price * ele.quantity;
+        // console.log(itemCost);
         console.log(`price: ${ele.price}, Quantity: ${ele.quantity}, Item Cost: ${itemCost}`);
-        let totalPrice = acc + ele.price;
-        return totalPrice;
+        // let totalPrice = acc + ele.price;
+        return acc+ itemCost;
     } , 0);
     // console.log(total);
     priceTotal.textContent =  total + 'EGP' ;

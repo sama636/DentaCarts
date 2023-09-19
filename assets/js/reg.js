@@ -1,7 +1,6 @@
 let emailAddress = document.getElementById("formGroupExampleInput");
 let passowrd = document.getElementById("formGroupExampleInput2");
 
-// ايه دي فعلا مش فاكره
 function valiodation (){
     // console.log("valiodate input");
     if(emailAddress.value.trim()===""){

@@ -1,8 +1,12 @@
 let emailAddress = document.getElementById("formGroupExampleInput");
 let passowrd = document.getElementById("formGroupExampleInput2");
+let pass = document.querySelector(".password__input");
+let emaill = document.querySelector(".email__input");
+let buttonLog  = document.querySelector(".log__btn")
+
+
 
 function valiodation (){
-    // console.log("valiodate input");
     if(emailAddress.value.trim()===""){
         onError(emailAddress,"Email Address cannot be empty");
     }
@@ -45,3 +49,21 @@ function onError(input,massage){
 }
 function isValidPassowrd(passowrd){
 }
+let storage = []
+function login(){
+    buttonLog.addEventListener("click", function(){
+        console.log(emaill.value);
+
+        let loginLocal = JSON.parse(localStorage.getItem("register"))
+        loginLocal.forEach((e) => {
+            
+            if (e.email == emaill.value && e.passowrd == pass.value){
+                window.open("/index.html");
+            }
+            else{
+                console.log("false");
+            }
+        })
+    })
+}
+login();

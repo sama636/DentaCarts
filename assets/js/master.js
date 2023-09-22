@@ -252,3 +252,10 @@ function addEventsToBtn(){
         })
     })
 }
+function massage(){
+    btn.addEventListener("click", () =>{
+        let massageEle = parent.querySelector("massage");
+        massageEle.innerText=massage;
+            
+        })
+}

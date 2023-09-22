@@ -2,7 +2,6 @@ let emailAddress = document.getElementById("formGroupExampleInput");
 let passowrd = document.getElementById("formGroupExampleInput2");
 
 function valiodation (){
-    // console.log("valiodate input");
     if(emailAddress.value.trim()===""){
         onError(emailAddress,"Email Address cannot be empty");
     }
@@ -12,15 +11,6 @@ function valiodation (){
     if(passowrd.value.trim()===""){
         onError(passowrd,"password cannot be empty");
     }
-    // else{
-    //     if(isValidPassowrd(passowrd.value.trim())){
-    //         onError(passowrd,"password is not valid");
-    //     }
-    //     else{
-    //         onSuccess(passowrd);
-    //     }
-    // }
-    
 }
 document.querySelector("button")
 .addEventListener("click", (event)=>{

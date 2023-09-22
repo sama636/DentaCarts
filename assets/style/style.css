@@ -12,7 +12,7 @@ a{
     cursor: pointer;
 }
 .inp input{
-    width: 450px;
+    width: 450px !important;
     height: 30px;
     border-radius: 5px;
 }
@@ -34,7 +34,7 @@ a{
     margin: 0px;
     display: block;
     min-width: 0px;
-    width: 100%;
+    width: 100% !important;
     padding-left: 20px;
     border: 1px solid rgb(219, 219, 219);
 }
@@ -102,38 +102,6 @@ li a{
     position: relative;
     padding-left: 0;
 }
-/* .image1 .im{
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-.image2 .im{
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-.image3 .im{
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-.image4 .im{
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-.image5 .im{
-    top: 10px;
-}
-.image{
-    display: flex;
-    gap: 4rem;
-    padding: 50px;
-}
-.image p{
-    padding-top: 10px;
-} */
-
 .EndodonticsDiv,
 .OrthodonticsDiv,
 .ImplantDiv,
@@ -165,7 +133,7 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
 .EndodonticsDiv {
     display: none;
@@ -175,7 +143,7 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
 .OrthodonticsDiv {
     display: none;
@@ -185,7 +153,7 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
 .ImplantDiv {
     display: none;
@@ -195,7 +163,7 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
 .PerioDiv {
     display: none;
@@ -205,7 +173,7 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
 .ConsumablesDiv {
     display: none;
@@ -215,7 +183,7 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
 .InstrmentDiv {
     display: none;
@@ -225,7 +193,7 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
 .EquipmentDiv {
     display: none;
@@ -235,13 +203,9 @@ ul{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 999; 
-    width: 90%;
+    width: 85%;
 }
-/* .svg{
-    position: relative;
-    bottom: 55px;
-    left: 25px;
-} */
+
 .card1 img{
     width: 140px;
     height: 140px;
@@ -251,27 +215,22 @@ ul{
 }
 i{
     color: rgb(214, 10, 10);
-    /* bottom: 50px; */
     position: relative;
-    /* right: 20px; */
     left: 20px;
 }
-[type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
-    /* right: -50px; */
+.splide__track{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 95%;
+    margin: auto;
 }
+
 .price{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
 }
-/* i:hover{
-    background-color: rgba(243, 131, 131, 0.5);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-} */
 
 .coll{
     display: flex;
@@ -290,8 +249,10 @@ i{
     margin: 80px;
 }
 
-.sale{
+.sale {
     margin-top: 5px;
+    position: relative;
+    left: 25px;
 }
 .aaaa p{
     color: #666;
@@ -315,11 +276,6 @@ i{
     background-color: #339;
     color: #fff;
 }
-
-/* .image{
-    width: 150px;
-    height: 150px;
-} */
 .carda{
     display: flex;
 }
@@ -328,25 +284,14 @@ i{
 }
 .icon{
     color: rgb(214, 10, 10);
-    /* bottom: 50px;
-    position: relative; */
-    /* right: 20px; */
 }
-/* .col-2{
-    border: 1px solid #666;
-    text-align: center;
-    width: 160px;
-    height: 160px;
-    position: relative;
-    /* bottom: 50px; */
-/* } */ 
+
 .splide__list {
     backface-visibility: hidden;
     display: -ms-flexbox;
     display: flex;
     height: 100%;
     margin: 0!important;
-    /* padding: 0!important; */
     gap: 5px;
     text-align: center;
 }
@@ -371,15 +316,14 @@ i{
     width: 85%;
     margin: auto;
 }
-/* .splide__list{
-    display: flex;
-    gap: 20px;
-} */
+
 .splide__slide{
     border: 1px solid rgb(206, 205, 205);
-    /* display: flex; */
     border-radius: 3px;
-    /* gap: 20px; */
+}
+
+.calc{
+    width: calc(14.2857%) !important;
 }
 .imagg{
     height: 150px;
@@ -495,7 +439,6 @@ i{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /* text-align: center; */
     }
     .title{
         display: flex;
@@ -508,7 +451,10 @@ i{
         width: 70px;
     }
 }
-/* .splide__slide img {
-    vertical-align: bottom;
-    height: 100%;
-} */
+.cart-btn{
+    padding: 4px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 3px;
+}

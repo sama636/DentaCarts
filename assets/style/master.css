@@ -23,7 +23,7 @@ a{
     cursor: pointer;
 }
 .inp input{
-    width: 450px;
+    width: 450px !important;
     height: 30px;
     border-radius: 5px;
 }
@@ -46,7 +46,7 @@ a{
     margin: 0px;
     display: block;
     min-width: 0px;
-    width: 100%;
+    width: 100% !important;
     padding-left: 15px;
     border: 1px solid rgb(219, 219, 219);
 }
@@ -350,20 +350,6 @@ ul{
         justify-content: space-between;
         /* text-align: center; */
     }
-    /* .Shop-By{
-        position: relative;
-        left: 20rem;
-        bottom: 26rem;
-    }
-    .by{
-        position: relative;
-        bottom: 7rem;
-    }
-    .css-mr5gla{
-        position: relative;
-        bottom: 10rem;
-        text-align: center;
-    } */
     .by{
         text-align: center;
         font-size: 16px;
@@ -381,4 +367,16 @@ ul{
     .see{
         width: 80px;
     }
+}
+.massage{
+    position: relative;
+    display: none;
+    background-color: rgb(37, 204, 37);
+    font-size: 31px;
+    font-weight: 400;
+    width: 335px;
+    text-align: center;
+    color: #061;
+    top: 0;
+    right: 0;
 }

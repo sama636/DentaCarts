@@ -230,3 +230,16 @@ function addEventsToBtn(){
         })
     })
 }
+const massageEle = document.querySelector(".massage");
+const addToCartBtn = document.querySelectorAll(".btn");
+
+function massage(){
+    addToCartBtn.forEach(ele =>{
+    ele.addEventListener("click", () =>{
+massageEle.innerHTML=`        <p> added to cart</p>
+`           
+        })
+            
+        })
+}
+massage();

@@ -40,11 +40,13 @@ body{
     font-size: 18px;
     font-weight: 400;
 }
-.btn{
+.btn {
     font-weight: bold;
     height: 55px !important;
     width: 85% !important;
     margin-top: 10px;
+    position: relative;
+    left: 30px;
 }
 .forget{
     margin-top: 20px;
